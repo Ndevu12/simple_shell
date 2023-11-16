@@ -24,7 +24,7 @@ char *search_path(char *command)
 
 	while (path_split[i])
 	{
-		path_len =strlen(path_split[i]);
+		path_len = strlen(path_split[i]);
 
 		if (path_split[i][path_len - 1] != '/')
 			path_concat = _strcat(path_split[i], "/");

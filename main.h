@@ -10,6 +10,12 @@
 #include <sys/stat.h>
 
 /*PROTOTYPES*/
+int _values_path(char **arg, char **env);
+char *_getline_command(void);
+void _exit_command(char **args, char *lineptr, int _exit);
+int _fork_fun(char **arg, char **av, char **env,
+		char *lineptr, int np, int c);
+char **_get_token(char *lineptr);
 int _strcmp(char *s1, char *s2);
 char *_strcpy(char *dest, char *src);
 char *search_path(char *command);
