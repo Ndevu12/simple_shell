@@ -42,7 +42,7 @@ int main(void)
 		if (args[0] != NULL)
 			exit_status = execute(args);
 		else{
-			
+		perror("Error");	
 		}
 		free(args);
 	}
