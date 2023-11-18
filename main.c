@@ -41,8 +41,9 @@ int main(void)
 
 		if (args[0] != NULL)
 			exit_status = execute(args);
-		else
-			perror("Error");
+		else{
+			
+		}
 		free(args);
 	}
 	return (exit_status);
