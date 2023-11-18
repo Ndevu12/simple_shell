@@ -23,7 +23,6 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 void _env(void);
 int execute(char **args);
 int empty_line(char *buff);
-int _fork_fun(char **arg, char **av, char **env, char *lineptr, int np, int c);
 
 /* GLOBAL VAR*/
 extern char **environ;
