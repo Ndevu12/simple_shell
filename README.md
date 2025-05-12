@@ -107,7 +107,7 @@ To compile and run this shell:
 
 ```bash
 # Clone the repository
-git clone [repository-url]
+git clone https://github.com/Ndevu12/simple_shell.git
 
 # Navigate to the project directory
 cd simple_shell
@@ -155,7 +155,7 @@ The shell supports the following built-in commands:
 
 This project was created by:
 
-- NIYOKWIZERWA Jean Paul Elisa (Ndevu) - [Email](mailto:jeanpaulelissa99@gmail.com)
+- NIYOKWIZERWA Jean Paul Elisa (Ndevu12) - [Email](mailto:niyokwizerwajeanpaulelisa@gmail.com)
 - Jackline NYANGANJOKI - [Email](mailto:jacklinenyaganjoki@gmail.com)
 
 Created as part of the ALX Software Engineering Program.

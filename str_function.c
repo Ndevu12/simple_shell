@@ -41,7 +41,6 @@ char *_strcpy(char *dest, char *src)
 	return (c);
 }
 
-
 /**
  * _split - split string
  * @str: string
@@ -84,7 +83,8 @@ char *_strcat(char *dest, char *src)
 	int a, b;
 
 	for (a = 0; dest[a] != '\0'; a += 1)
-	{}
+	{
+	}
 
 	for (b = 0; src[b] != '\0'; b += 1)
 	{
@@ -100,3 +100,12 @@ char *_strcat(char *dest, char *src)
  * @s: string
  * Return: result
  */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+
+	return (i);
+}
