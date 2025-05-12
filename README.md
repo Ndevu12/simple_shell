@@ -7,6 +7,7 @@ A custom Unix shell implementation written in C as part of the ALX Software Engi
 - [Overview](#overview)
 - [Features](#features)
 - [Project Structure](#project-structure)
+- [System Requirements](#system-requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Built-in Commands](#built-in-commands)
@@ -58,6 +59,48 @@ The shell implements the following functionality as specified in the project req
 10. Built-in `env` command for environment variable display
 11. Custom implementations of standard library functions
 
+## System Requirements
+
+### Platform Compatibility
+
+This shell is **strictly designed for Unix/Linux environments** and is not compatible with native Windows systems due to its dependency on Unix-specific system calls and headers. The shell relies on:
+
+- **Unix System Calls**: fork(), exec(), wait(), etc.
+- **Unix File System**: Path conventions and file operations
+- **Unix Process Model**: Parent-child process relationships
+
+### Dependencies
+
+The shell requires:
+
+- **Operating System**: Linux/Unix environment (Ubuntu 20.04 LTS recommended)
+- **Compiler**: GCC with C89 standard support
+- **Required Headers**: Standard C libraries and Unix-specific headers:
+  - `<sys/wait.h>`: For process control and wait functions
+  - `<sys/stat.h>`: For file status and information
+  - `<sys/types.h>`: For system data types
+  - `<unistd.h>`: For Unix standard functions like fork, exec
+
+### Windows Users
+
+If you're using Windows, you'll need a Unix-compatible environment to compile and run this shell:
+
+1. **Windows Subsystem for Linux (WSL)** - Recommended approach:
+
+   ```powershell
+   # Install WSL with Ubuntu
+   wsl --install -d Ubuntu
+   
+   # After installation and restart, access your project through:
+   wsl
+   cd /mnt/c/Users/Ndevu/Desktop/recap_on_C/real_projects/simple_shell
+   ```
+
+2. **Alternative options**:
+   - **Cygwin**: Provides Unix-like environment and tools on Windows
+   - **MinGW/MSYS2**: Minimalist GNU for Windows with Unix tools
+   - **VirtualBox/VMware**: Run a complete Linux virtual machine
+
 ## Installation
 
 To compile and run this shell:
@@ -75,6 +118,17 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o shell
 # Run the shell
 ./shell
 ```
+
+### Compilation Notes
+
+When compiling on Windows without a proper Unix environment, you may encounter errors like:
+
+```
+fatal error: sys/wait.h: No such file or directory
+#include <sys/wait.h>
+```
+
+This is expected as these are Unix-specific headers. Please use one of the Unix-compatible environments mentioned in the System Requirements section.
 
 ## Usage
 
